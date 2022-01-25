@@ -11,7 +11,7 @@
 
 	&:hover{
 		cursor: pointer;
-		& .backgroundImg{
+		& .backgroun{
 			transform: scale(1.1);
 			transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 		}
@@ -33,7 +33,7 @@
 	  margin-left: 7.5px;
 	}
 
-	.backgroundImg{
+	.backgroun{
 		width: 100%;
 		height: 100%;
 		background-position: center;
