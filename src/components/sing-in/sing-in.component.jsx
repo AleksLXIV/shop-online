@@ -52,8 +52,6 @@ class SingIn extends React.Component {
 						required
 					/>
 
-
-
 					<FormInput type='password'
 						name="password"
 						id='password'
@@ -62,6 +60,7 @@ class SingIn extends React.Component {
 						label='password'
 						required
 					/>
+					
 					<div className='buttons'>
 					<CustomButton type="submit">Sing in</CustomButton>
 					<CustomButton onClick={signInWithGoogle} isGoogleSignIn>
