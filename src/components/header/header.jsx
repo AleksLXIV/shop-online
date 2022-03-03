@@ -4,10 +4,12 @@ import { NavLink } from 'react-router-dom';
 import { ReactComponent as Logo} from '../../assets/crown.svg'
 import { auth } from '../firebase/firebase.utils';
 import { connect } from 'react-redux';
+import DropDown from '../card-dropdown/card-dropdown';
+import CartIcon from './../cart-icon/cart-icon.component';
 
 
 
-const Header = ({currentUser}) =>(
+const Header = ({currentUser, hidden}) =>(
 	<div className='header'>
 		<NavLink className='logo-container' to='/'>
 			<Logo className='logo' />
@@ -21,16 +23,22 @@ const Header = ({currentUser}) =>(
 			</NavLink>
 			{
 				currentUser ?
-				<div className='option' onClick={() => auth.signOut()}>SIGN OUT</div>
-				:
 				<NavLink className='option' to='./signin'>SIGN IN</NavLink>
+				:
+				<div className='option' onClick={() => auth.sigOut()}>SIGN OUT</div>
+			}
+			<CartIcon />
+			{
+				console.log(`Current user ${currentUser}`)
 			}
 		</div>
+		{hidden ? null : <DropDown />}
 	</div>
 )
 
-const mapStateToProps = state =>({
-	currentUser: state.user.userReducer
+const mapStateToProps = ({user: {currentUser}, card: { hidden }}) =>({
+	currentUser,
+	hidden
 })
 
 export default connect(mapStateToProps)(Header)
