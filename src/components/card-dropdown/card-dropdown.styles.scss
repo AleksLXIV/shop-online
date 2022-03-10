@@ -10,6 +10,8 @@
 	top: 80px;
 	right: 70px;
 	z-index: 5;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	
 	.card-item{
 		height: 240px;

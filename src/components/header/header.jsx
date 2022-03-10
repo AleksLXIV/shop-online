@@ -28,9 +28,6 @@ const Header = ({currentUser, hidden}) =>(
 				<div className='option' onClick={() => auth.sigOut()}>SIGN OUT</div>
 			}
 			<CartIcon />
-			{
-				console.log(`Current user ${currentUser}`)
-			}
 		</div>
 		{hidden ? null : <DropDown />}
 	</div>
