@@ -1,0 +1,58 @@
+.posts {
+	display         : flex;
+	flex-direction  : column;
+	justify-content : space-between;
+	width           : 700px;
+	height          : 700px;
+	margin          : 0 auto;
+	padding         : 15px 15px;
+	background-color: antiquewhite;
+
+	.posts__window {
+		flex: 1 0 auto;
+
+		.posts__absent {
+			display    : block;
+			font-size  : 20px;
+			text-align : center;
+			padding-top: 50px;
+		}
+	}
+
+	.posts__inputWrap {
+		display        : flex;
+		justify-content: space-between;
+		border         : 3px solid rgb(218, 208, 194);
+		border-radius  : 5px;
+		width          : 100%;
+		height         : 70px;
+
+		.posts__input {
+			height          : 100%;
+			flex            : 1 0 auto;
+			border          : 0px solid;
+			background-color: beige;
+
+			&:focus {
+				outline-width: 0;
+			}
+		}
+
+		.posts__button {
+			width           : 50px;
+			background-color: white;
+			padding         : 0 10px;
+			border          : none;
+			background-color: beige;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&:focus {
+				outline-width: 0;
+			}
+		}
+	}
+
+}

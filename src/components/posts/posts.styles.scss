@@ -1,0 +1,17 @@
+.posts__post{
+	display: flex;
+	border: 1px solid rgb(224, 214, 203);
+	background-color: rgb(241, 228, 211);
+	border-radius:5px;
+	padding: 15px 15px;
+	.posts__currentPost{
+		width: 95%;
+		overflow: hidden;
+	}
+	 span{
+		width: 5%;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}
