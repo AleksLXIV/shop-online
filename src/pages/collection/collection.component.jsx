@@ -7,13 +7,20 @@ import { selectCollection } from '../../redux/shop/shop.selector';
 
 
 
-const CollectionPage = ({collection}) =>{
-	console.log(collection)
+const CollectionPage = ({ collection, match }) => {
+	const { title, items } = collection
+	console.log(match)
 	return(
-	<div className='collection-page'>
-		<h2>COLLECTION PAGE</h2>
-	</div>
-)}
+		<div className='collection-page'>
+			<h2 className='title'>{title}</h2>
+			<div className='items'>
+				{items.map(item => (
+				<CollectionItem key={item.id} item={item} />
+				))}
+		</div>
+		</div>
+	)
+}
 
 const mapStateToProps = (state, ownProps) => ({
 	collection: selectCollection(ownProps.match.params.collectionId)(state)

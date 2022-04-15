@@ -1,5 +1,5 @@
 import React from 'react'
-import { selectCollections } from '../../redux/shop/shop.selector';
+import { selectCollectionsForPreview } from '../../redux/shop/shop.selector';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import CollectionPreview from '../preview-collection/collection-preview.component';
@@ -19,7 +19,7 @@ const CollectionsOverviev = ({ collections }) => (
 
 
 const mapStateToProps = createStructuredSelector({
-	collections: selectCollections
+	collections: selectCollectionsForPreview
 })
 
 export default connect(mapStateToProps)(CollectionsOverviev)
